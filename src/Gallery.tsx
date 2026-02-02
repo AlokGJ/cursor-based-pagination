@@ -78,7 +78,7 @@ export const Gallery = () => {
 const GalleryItem = ({ item }) => {
   return (
     <div className="gallery-item">
-      <img loading='eager'  src={item.download_url} alt="Gallery image not found" />
+      <img loading='eager' decoding='async' fetchPriority='high'  src={item.download_url} alt="Gallery image not found" />
       <span>{item.author}</span>
     </div>
   );
